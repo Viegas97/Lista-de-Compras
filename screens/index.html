@@ -14,13 +14,23 @@
     <main class="container d-flex justify-content-center align-items-center min-vh-100">
         <div id="create-list">
             <img id="logo" src="/images/logo.png">
-            <input id="openPopupButton" type="button" value="Criar lista">
+            <div id="addEdit-list">
+                <input id="openPopupButton" type="button" value="Criar lista">
+                <input id="openLists" type="button" value="Listas salvas">
+            </div>
         </div>
 
         <div id="popupOverlay" class="overlay">
             <div class="popup">
                 <button id="closePopupButton" class="close-button">X</button>
-                <h2>Listas:</h2>
+                <h2>Lista de compra</h2>
+                <div id="productOnList">
+                    <ul>
+                        <li>
+                            <h4>teste</h4>
+                        </li>
+                    </ul>
+                </div>
                 <button id="openSubPopupButton">+</button>
             </div>
         </div>

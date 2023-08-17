@@ -2,6 +2,25 @@ html body{
     background-color: #abf09a;
 }
 
+#addEdit-list{
+    display: flex;
+    flex-direction: row;
+}
+
+#openLists{
+    margin-top: 40px;
+    margin-bottom: -20px;
+    margin-left: 35px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 15px;
+    width: 140px;
+    height: 60px;
+    font-size: 23px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 #create-list {
     background-color: #30aa44;
     border: solid #1a7529 3px;
@@ -22,11 +41,17 @@ html body{
     border-radius: 15px;
     width: 140px;
     height: 60px;
-    font-size: 25px;
+    font-size: 23px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 #openPopupButton:hover {
+    border: solid 1px #000000;
+    background-color: #084112; 
+    color: #ffffff; 
+}
+
+#openLists:hover {
     border: solid 1px #000000;
     background-color: #084112; 
     color: #ffffff; 
@@ -87,8 +112,8 @@ html body{
     margin: 10px auto;
     padding: 10px 20px;
     font-size: 20px;
-    background-color: #084112;
-    color: #fff;
+    background-color: #7cf145;
+    color: #000000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -97,7 +122,7 @@ html body{
 
 .popup .close-button {
     font-size: 12px;
-    color: #ffffff;
+    color: #000000;
     transition: background-color 0.3s, color 0.3s;
 
 }
@@ -109,9 +134,8 @@ html body{
 }
 
 .popup button:hover {
-    background-color: #7cf145;
-    color: #000000;
-    border: solid 1px #000000;
+    background-color: #084412;
+    color: #ffffff;
 }
 
 #addToList{
