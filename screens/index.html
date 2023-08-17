@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+</head>
+
+<body>
+    <main class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div id="create-list">
+            <img id="logo" src="/images/logo.png">
+            <input id="openPopupButton" type="button" value="Criar lista">
+        </div>
+
+        <div id="popupOverlay" class="overlay">
+            <div class="popup">
+                <button id="closePopupButton" class="close-button">X</button>
+                <h2>Listas:</h2>
+                <button id="openSubPopupButton">+</button>
+            </div>
+        </div>
+
+        <div id="subPopupOverlay" class="overlay">
+            <div class="popup">
+                <button id="closeSubPopupButton" class="close-button">X</button>
+                <div class="product">
+                    <label for="name">Produto:</label>
+                    <input type="text" id="item">
+                </div>
+                <div class="product">
+                    <label for="name">Valor:</label>
+                    <input type="text" id="item">
+                </div>
+                <div class="product">
+                    <label for="name">Quantidade:</label>
+                    <input type="text" id="item">
+                </div>
+                <button id="addToList">Adicionar</button>
+            </div>
+        </div>
+
+        <script src="/scripts/script.js"></script>
+    </main>
+</body>
+
+
+</html>
