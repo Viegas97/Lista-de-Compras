@@ -11,49 +11,56 @@
 </head>
 
 <body>
-    <main class="container d-flex justify-content-center align-items-center min-vh-100">
-        <div id="create-list">
-            <img id="logo" src="/images/logo.png">
-            <div id="addEdit-list">
-                <input id="openPopupButton" type="button" value="Criar lista">
-                <input id="openLists" type="button" value="Listas salvas">
+    <main>
+        <nav>
+            <div id="navbar">
+                <img src="/images/logo.png" width="100px">
+                <div id="btnsNavbar">
+                    <button class="navbarBtn">Criar Lista</button>
+                    <button class="navbarBtn">Listas Salvas</button>
+                    <button class="navbarBtn">Perfil</button>
+                </div>
             </div>
-        </div>
-
-        <div id="popupOverlay" class="overlay">
-            <div class="popup">
-                <button id="closePopupButton" class="close-button">X</button>
-                <h2>Lista de compra</h2>
-                <div id="productOnList">
-                    <ul>
-                        <li>
-                            <h4>teste</h4>
-                        </li>
-                    </ul>
+        </nav>
+        <section class="container d-flex justify-content-center align-items-center min-vh-100">
+            <div id="create-list">
+                <img id="logo" src="/images/logo.png">
+                <div id="addEdit-list">
+                    <input id="openPopupButton" type="button" value="Criar lista">
+                    <input id="openLists" type="button" value="Listas salvas">
                 </div>
-                <button id="openSubPopupButton">+</button>
             </div>
-        </div>
 
-        <div id="subPopupOverlay" class="overlay">
-            <div class="popup">
-                <button id="closeSubPopupButton" class="close-button">X</button>
-                <div class="product">
-                    <label for="name">Produto:</label>
-                    <input type="text" id="item">
+            <div id="popupOverlay" class="overlay">
+                <div class="popup">
+                    <button id="closePopupButton" class="close-button">X</button>
+                    <h2>Lista de compra</h2>
+                    <div id="productOnList">
+                        <ul>
+                            <!-- Os cards criados serão adicionados aqui -->
+                        </ul>
+                        <h4></h4>
+                    </div>
+                    <button id="openSubPopupButton">Adicionar produto</button>
                 </div>
-                <div class="product">
-                    <label for="name">Valor:</label>
-                    <input type="text" id="item">
-                </div>
-                <div class="product">
-                    <label for="name">Quantidade:</label>
-                    <input type="text" id="item">
-                </div>
-                <button id="addToList">Adicionar</button>
             </div>
-        </div>
 
+            <div id="subPopupOverlay" class="overlay">
+                <div class="popup">
+                    <button id="closeSubPopupButton" class="close-button">X</button>
+                    <div class="product">
+                        <input type="text" id="productName" placeholder="Nome do produto">
+                    </div>
+                    <div class="product">
+                        <input type="text" id="productValue" placeholder="Valor do produto">
+                    </div>
+                    <div class="product">
+                        <input type="text" id="productQtd" placeholder="Quantidade do produto">
+                    </div>
+                    <button id="addToList">Adicionar</button>
+                </div>
+            </div>
+        </section>
         <script src="/scripts/script.js"></script>
     </main>
 </body>

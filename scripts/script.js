@@ -26,3 +26,44 @@ subPopupOverlay.addEventListener('click', (event) => {
         subPopupOverlay.style.display = 'none';
     }
 });
+
+
+class Produto {
+    constructor(nome, valor, quantidade) {
+        this.nome = nome;
+        this.valor = valor;
+        this.quantidade = quantidade;
+    }
+}
+
+const produtos = [];
+
+const AddProduct = document.getElementById('addToList');
+
+AddProduct.addEventListener('click', () => {
+    const nomeProduto = document.getElementById('productName').value;
+    const valorProduto = document.getElementById('productValue').value;
+    const quantidadeProduto = document.getElementById('productQtd').value;
+
+    const novoProduto = new Produto(nomeProduto, valorProduto, quantidadeProduto);
+
+    produtos.push(novoProduto);
+
+    atualizarLista();
+});
+
+function atualizarLista() {
+    const ulElement = document.querySelector("#productOnList ul");
+
+    const novoProduto = produtos[produtos.length - 1]; // Pega o último produto adicionado
+
+    const liElement = document.createElement("li");
+    const h4Element = document.createElement("h4");
+    h4Element.textContent = `${novoProduto.nome}, R$${novoProduto.valor}, qtd: ${novoProduto.quantidade}`;
+    liElement.appendChild(h4Element);
+    ulElement.appendChild(liElement);
+}
+
+
+
+
